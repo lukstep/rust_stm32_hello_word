@@ -1,0 +1,20 @@
+[build]
+jobs = 4
+target = "thumbv7em-none-eabihf"  # Cortex M4-F target
+
+[target.thumbv7em-none-eabihf]
+rustflags = ["-C", "link-arg=-Tlink.x",]
+
+[profile.dev]
+codegen-units = 1
+debug = true
+lto = true
+debug-assertions = true
+overflow-checks = true
+opt-level = 0
+
+[profile.release]
+codegen-units = 1
+debug = false
+lto = true
+opt-level = 3

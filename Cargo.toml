@@ -1,0 +1,16 @@
+[package]
+name = "rust_embedded_hello_word"
+version = "0.1.0"
+authors = [""]
+edition = "2018"
+
+[dependencies]
+cortex-m-rt = "0.6.10"
+panic-halt = "0.2.0"
+stm32f4xx-hal = { version = "0.6.0", features = ["stm32f446"] }
+
+[[bin]]
+name = "hello_word"
+path = "src/main.rs"
+test = false
+bench = false
